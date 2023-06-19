@@ -10,76 +10,191 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
-<body>
+<body onload="getProducts()">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 
+    <!-- nav -->
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <div class = "col" >
-                <img src="img/main_icon.png" alt="" height="50px" width="62px">
-            </div>
-            
-            <a class="col navbar-brand me-auto" href="#">Navbar</a>
+            <nav class="navbar bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/main_icon.png" alt="Logo" width="45" height="35"
+                            class="d-inline-block align-text-top">
+                        신비의 사랑
+                    </a>
+                </div>
+            </nav>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse me-auto" id="navbarSupportedContent">
+            <div class="col collapse navbar-collapse me-auto" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown me-auto">
+                    <li class="nav-item dropdown p-3">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Dropdown
+                            원두
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">원두</a></li>
+                            <li><a class="dropdown-item" href="#">장복</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown me-auto">
+                    <li class="nav-item dropdown p-3">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Dropdown
+                            생두
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">생두단가표</a></li>
+                            <li><a class="dropdown-item" href="#">생두</a></li>
+                            <li><a class="dropdown-item" href="#">생두소분</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown me-auto">
+                    <li class="nav-item dropdown p-3">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Dropdown
+                            도매
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">도매</a></li>
+                            <li><a class="dropdown-item" href="#">B2B</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item dropdown p-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            주문
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">주문목록</a></li>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>
+    <!-- nav -->
 
+    <!-- body1 -->
+    <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+        style="background-image: url('img/bg_img.png');">
+        <h1 class="mb-3 h1">신비의 사랑</h1>
+        <p class="h5 lh-lg">
+            20여종의 원두를 즐길 수 있는 커피전문점입니다. <br> 싱그러운 초록식물들이 자리잡은 아늑한 분위기인데요. <br>
+            우아한 무늬의 컵에 향 좋은 커피를 담아주지요. <br>남미, 아프리카 등 여러 산지의
+            핸드드립커피가 대표메뉴입니다.
+        </p>
+    </div>
+    <!-- body1 -->
+
+    <p class="h4 text-center bg-secondary text-white p-3">싱글오리진 Single Origin</p>
+
+    <!-- body2 -->
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col card border-secondary m-2" style="width: 18rem;" id="card0">
+            <div class="card-body">
+                <h5 class="card-title h5" id="cardtitle0"></h5>
+                <p class="card-text h6" id="cardtext0"></p>
+                <a href="#" class="btn btn-secondary h6">상세 페이지</a>
+            </div>
+        </div>
+        <div class="col card border-secondary m-2" style="width: 18rem;" id="card1">
+            <div class="card-body">
+                <h5 class="card-title h5" id="cardtitle1"></h5>
+                <p class="card-text h6" id="cardtext1"></p>
+                <a href="#" class="btn btn-secondary h6">상세 페이지</a>
+            </div>
+        </div>
+        <div class="col card border-secondary m-2" style="width: 18rem;" id="card2">
+            <div class="card-body">
+                <h5 class="card-title h5" id="cardtitle2"></h5>
+                <p class="card-text h6" id="cardtext2"></p>
+                <a href="#" class="btn btn-secondary h6">상세 페이지</a>
+            </div>
+        </div>
+        <div class="col card border-secondary m-2" style="width: 18rem;" id="card3">
+            <div class="card-body">
+                <h5 class="card-title h5" id="cardtitle3"></h5>
+                <p class="card-text h6" id="cardtext3"></p>
+                <a href="#" class="btn btn-secondary h6">상세 페이지</a>
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+    <!-- body2 -->
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>Sinbi_Love
+                        </h6>
+                        <p class="h6">
+                            농협은행 000-000-00000000 <br> (주)신비의 사랑
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 h6">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 h6">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p><i class="fas fa-home me-3"></i> 제주 제주시 1100로 2933</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            sinvi_love@example.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold">Sinvi_Love</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
 </body>
 
