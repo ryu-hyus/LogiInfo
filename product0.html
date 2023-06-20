@@ -10,11 +10,11 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
-<body onload="getProducts()">
+<body onload="getOneProducts()">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="product.js"></script>
 
     <!-- nav -->
     <nav class="navbar navbar-expand-lg bg-light">
@@ -80,25 +80,44 @@
     </nav>
     <!-- nav -->
 
-    <!-- body1 -->
-    <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
-        style="background-image: url('img/bg_img.png');">
-        <h1 class="mb-3 h1">신비의 사랑</h1>
-        <p class="h5 lh-lg">
-            20여종의 원두를 즐길 수 있는 커피전문점입니다. <br> 싱그러운 초록식물들이 자리잡은 아늑한 분위기인데요. <br>
-            우아한 무늬의 컵에 향 좋은 커피를 담아주지요. <br>남미, 아프리카 등 여러 산지의
-            핸드드립커피가 대표메뉴입니다.
-        </p>
+    <!-- body -->
+    <div class="row">
+        <div class="col" style="padding-left: 5rem; padding-right: 2rem;">
+            <img src="" id="product_img" style="width: 25rem;">
+        </div>
+        <div class="col">
+            <div id="product_Info">
+            </div>
+            <div>
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Weight</label>
+                    <div class="col-sm-10">
+                        <select class="form-select w-50" id="weight_sel">
+                            <option value="" selected>옵션을 선택해주세요</option>
+                            <option value="" disabled>-----------------</option>
+                            <option value="1">200g</option>
+                            <option value="2">500g</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Grind</label>
+                    <div class="col-sm-10">
+                        <select class="form-select w-50" id="grind_sel">
+                            <option value="" selected>옵션을 선택해주세요</option>
+                            <option value="" disabled>-----------------</option>
+                            <option value="1">Grinded</option>
+                            <option value="2">Whole Bean</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- body1 -->
-
-    <p class="h4 text-center bg-secondary text-white p-3">싱글오리진 Single Origin</p>
-
-    <!-- body2 -->
-    <section class="container" id="productsSection">
-        <div class="row"></div>
-    </section>
-    <!-- body2 -->
+    <div class="form-row text-center mt-3">
+        <button type="button" class="btn btn-primary">주문하기</button>
+    </div>
+    <!-- body -->
 
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-light text-muted">
